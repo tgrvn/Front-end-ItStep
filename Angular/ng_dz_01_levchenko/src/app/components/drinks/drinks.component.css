@@ -1,0 +1,19 @@
+.container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem 0;
+  background-color: var(--primary-color-bc);
+}
+.container h1 {
+  font-weight: 900;
+  text-align: center;
+  color: var(--light-color-text);
+}
+.container .cards {
+  padding: 3rem;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem 0;
+  justify-content: space-between;
+}
