@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 80%;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 5%;
+        }
+
+        img {
+            border-radius: 100%;
+            border: 1px solid #bdbdbd;
+            box-shadow: 0.4rem 0.4rem 10px #bdbdbd;
+        }
+
+        .wrap {
+            width: 100%;
+        }
+
+        .left {
+            width: 40%;
+            float: left;
+            text-align: center;
+            margin-top: 2%;
+        }
+
+        .right {
+            width: 40%;
+            float: right;
+            background: rgb(245, 245, 245);
+            padding: 2%;
+            box-shadow: 0.4rem 0.4rem 10px #bdbdbd;
+        }
+
+        .desc_row {
+            clear: both;
+            padding-top: 1%;
+        }
+
+        .desc_row > h3 {
+            float: left;
+        }
+
+        .desc_row > h4 {
+            float: right;
+        }
+
+        .des_scale, .hc_scale {
+            width: 100%;
+            height: 10px;
+            background: rgb(27, 27, 27);
+            margin-top: 15%;
+           
+        }
+
+        .scale_1 {
+            height: 100%;
+            width: 30%;
+            background: gray;
+        }
+
+        .scale_2 {
+            height: 100%;
+            width: 10%;
+            background: gray;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Тигран Левченко</h1>
+
+    <div class="wrap"></div>
+
+        <div class="left">
+
+            <img src="./assets/1.jpg" alt="photo" width="300" height="300">
+            <h3>24 года</h3>
+            <h4>Проживаю в Днепре</h4>
+            <h5>Будующий веб-разработчик :)</h5>
+
+        </div>
+
+        <div class="right">
+
+            <h2>Профиль</h2>
+            <p>Имя уже знаете, знания ниже поверхностных но всегда есть куда стремиться. 
+                Была выбрана компютерная академи "ШАГ" для получения образования в сфере IT. 
+                В резюме писать пока нечего, поэтому пишу всё, что приходит сейчас в голову. 
+                Также это дз и этот текст прочитает только преподаватель (и мб жена) так что
+                решил особо не париться.
+            </p>
+
+            <h2>Знания</h2>
+            
+            <div class="desc_row">
+                <h3>Дизайн</h3>
+                <h4>30%</h4>
+            </div>
+
+            <div class="des_scale">
+                <div class="scale_1"></div>
+            </div>
+
+            <div class="desc_row">
+                <h3>HTML/CSS</h3>
+                <h4>10%</h4>
+            </div>
+
+            <div class="hc_scale">
+                <div class="scale_2"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

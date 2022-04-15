@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+.tab {
+    width: 100%;
+    margin: 5% auto;
+}
+.tab table {
+    border-collapse: collapse;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.tvar {
+    display: none;
+}
+
+td, th {
+    border: 1px solid gray;
+}
+
+table td {
+    padding: 5px;
+}
+
+th {
+    width: 25px;
+    background-color: #FFF59D;
+    font-weight: 700;
+}
+
+.tab table tr td:nth-of-type(1) {
+    background-color: #FFF59D;
+    width: 80px;
+    font-weight: 700;
+}
+
+.tab table tr td:nth-of-type(2), td:nth-of-type(3), td:nth-of-type(4), td:nth-of-type(5) {
+    width: 270px;
+}
+
+.tab table tr td:nth-of-type(2) {
+    background-color: #81D4FA;
+}
+
+.tab table tr td:nth-of-type(3) {
+    background-color: #EF9A9A;
+}
+
+.tab table tr td:nth-of-type(4) {
+    background-color: #A5D6A7;
+}
+
+.tab table tr td:nth-of-type(5) {
+    background-color: #CE93D8;
+}
+
+.tab table thead tr:first-child {
+    font-weight: 700;
+}
+
+.bold, .tab table tr:nth-of-type(2), .tab table tr:nth-of-type(4), .tab table tr:nth-of-type(8), .tab table tr:nth-of-type(12) {
+    font-weight: 700;
+}
+
+.tab table tr:nth-of-type(4) th, .tab table tr:nth-of-type(8) th, .tab table tr:nth-of-type(12) th {
+    padding: 20px;
+}
+
+.btn {
+    width: 90%;
+    height: 300px;
+    margin: 1% auto;
+    background-color: black;
+    text-align: center;
+}
+
+button {
+    width: 118px;
+    height: 50px;
+    position: relative;
+    background-color: transparent;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    margin: 10% auto;
+    border: 2px solid #CE93D8;
+    color: #CE93D8;
+    box-shadow: 0 0 15px 5px #CE93D8;
+    text-align: left;
+    transition: 0.3s;
+}
+
+button:hover {
+    box-shadow: 0 0;
+    transition: 0.3s;
+    width: 190px;
+    visibility: visible;
+}
+
+button:hover::after {
+    width: 60px;
+    transition: 0.3s;
+}
+
+button:hover::before {
+    width: 10px;
+    height: 10px;
+    transition: 0.3s;
+    border-top: 2px solid #CE93D8;
+    border-right: 2px solid #CE93D8;
+}
+
+button:active::after {
+    background-color: black;
+}
+
+button:active::before {
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+}
+
+button:active {
+    background-color: #CE93D8;
+    box-shadow: 0 0 15px 5px #CE93D8;
+    color: black;
+    width: 190px;
+    transition: 0.3s;
+}
+
+button::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0px;
+    height: 2px;
+    top: 23px;
+    right: 15px;
+    background-color: #CE93D8;
+}
+
+button::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 18px;
+    right: 16px;
+    transform: rotate(45deg);
+}
+
+

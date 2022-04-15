@@ -1,0 +1,294 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.ui-kit {
+    background-color: #F5F5F5;
+    height: 700px;
+    width: 700px;
+    margin: 1rem auto;
+    padding: 1rem;
+}
+
+/* Inputs */
+
+.inputs {
+    display: flex;
+    gap: 1rem;
+}
+
+[type="text"] {
+    border: 2px solid #BDBDBD;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+[type="text"]:focus {
+    outline: none;
+}
+
+[type="text"]::placeholder {
+    color: #9E9E9E;
+}
+
+.va-inva {
+    position: relative;
+}
+
+.va-inva span,
+.va-inva span::before {
+    content: '';
+    display: block;
+    height: 5px;
+    position: absolute;
+    transition: 0.3s;
+}
+
+#valid:valid {
+    border: 2px solid #81C784;
+}
+
+#valid:valid + span {
+    top: 15px;
+    width: 20px;
+    transform: rotate(-45deg);
+    right: 5px;
+    background-color: #81C784;
+}
+
+#valid:valid + span::before {
+    width: 10px;
+    top: -5px;
+    right: 12.5px;
+    transform: rotate(90deg);
+    background-color: #81C784;
+}
+
+#valid:valid::placeholder {
+    color: #81C784;
+}
+
+#valid:invalid {
+    border: 2px solid #E57373;
+}
+
+#valid:invalid + span{
+    width: 20px;
+    background-color: #E57373;
+    top: 15px;
+    right: 10px;
+    transform: rotate(45deg);
+}
+
+#valid:invalid + span::before {
+    width: 20px;
+    background-color: #E57373;
+    top: 0;
+    left: 0;
+    transform: rotate(90deg);
+}
+
+#valid:invalid::placeholder {
+    color: #E57373;
+}
+
+/* Check boxes */
+
+.check p {
+    font-size: 1.2rem;
+}
+
+.check {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.checkbox {
+    width: 60px;
+    height: 30px;
+    position: relative;
+    background-color: transparent;
+    position: relative;
+}
+
+.checkbox span {
+    width: 60px;
+    height: 30px;
+    position: absolute;
+    border: 2px solid #E57373;
+    background: transparent;
+    border-radius: 10px;
+    top: 0;
+    left: 0;
+}
+
+.checkbox label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+#checked {
+    margin: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.check span::after {
+    content: '';
+    display: block;
+    width: 28px;
+    height: 24px;
+    background-color: #E57373;
+    border-radius: 7px;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    transition: 0.3s;
+}
+
+#checked:checked+span {
+    border: 2px solid #81C784;
+    transition: 0.3s;
+}
+
+#checked:checked+span::after {
+    right: 27px;
+    background-color: #81C784;
+    transition: 0.3s;
+}
+
+/* radio */
+
+#one,
+#two {
+    margin: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.sex {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.radio {
+    width: 25px;
+    height: 25px;
+    position: relative;
+}
+
+.radio span {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid #81C784;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.radio span::after {
+    content: '';
+    display: block;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #81C784;
+    position: absolute;
+    top: 1.4px;
+    left: 1.4px;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.radio label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+#one:checked + span::after {
+    opacity: 1;
+}
+
+#two:checked + span::after {
+    opacity: 1;
+}
+
+.male,
+.female {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+/* buttons */
+
+.btn-1,
+.btn-2,
+.btn-3 {
+    padding: 0.5rem 1rem;
+    width: 100px;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    background-color: #9E9E9E;
+    cursor: pointer;
+}
+
+.btn-1:hover {
+    background-color: #43A047;
+}
+
+.btn-1:active {
+    background-color: #81C784;
+}
+
+.btn-2:hover {
+    background-color: #E53935;
+}
+
+.btn-2:active {
+    background-color: #E57373;
+}
+
+.btn-4,
+.btn-5 {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-4 {
+    background-color: #81C784;
+}
+
+.btn-5 {
+    background-color: #E57373;
+}
+
+/* textarea */
+
+textarea {
+    resize: none;
+    outline: none;
+}

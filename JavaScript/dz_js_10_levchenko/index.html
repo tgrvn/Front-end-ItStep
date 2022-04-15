@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    .object-changer {
+      display: flex;
+      gap: 1.5rem;
+      margin: 2rem;
+      padding: 1.5rem;
+      border: 2px solid #ff7043;
+      border-radius: 20px;
+      background-color: #ff7043;
+    }
+
+    .changers {
+      display: flex;
+      flex-direction: column;
+      width: 200px;
+      gap: 0.7rem;
+      padding: 1.5rem;
+      border: 2px solid #ff7043;
+      border-radius: 20px;
+      background-color: #fff;
+    }
+
+    label {
+      margin: 1.3rem 0 0 0;
+    }
+
+    .object {
+      width: 100%;
+      padding: 1rem;
+      border: 2px solid #ff7043;
+      border-radius: 20px;
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .result {
+      margin: 2rem;
+      padding: 1.5rem;
+      border: 2px solid #ff7043;
+      border-radius: 20px;
+      background-color: #ff7043;
+    }
+
+    .css {
+      /* width: 100%; */
+      padding: 1rem;
+      border: 2px solid #ff7043;
+      border-radius: 20px;
+      background-color: #fff;
+    }
+  </style>
+  <body>
+    <div class="wrapper">
+      <div class="object-changer">
+        <div class="changers">
+          <label for="width">Ширина:</label>
+          <input
+            type="range"
+            name="width"
+            id="width"
+            value="50"
+            min="1"
+            max="250"
+          />
+
+          <label for="height">Высота:</label>
+          <input
+            type="range"
+            name="height"
+            id="height"
+            value="50"
+            min="1"
+            max="250"
+          />
+
+          <label for="backgroundColor">Цвет фигуры:</label>
+          <input type="color" name="bckg-color" id="backgroundColor" />
+
+          <label for="border">Ширина обводки:</label>
+          <input
+            type="range"
+            name="border"
+            id="border"
+            min="0"
+            max="10"
+            value="0"
+          />
+
+          <label for="borderColor">Цвет обводки:</label>
+          <input type="color" name="borderColor" id="borderColor" />
+
+          <label for="borderRadius">Округление фигуры:</label>
+          <input
+            type="range"
+            name="borderRadius"
+            id="borderRadius"
+            min="0"
+            max="50"
+            value="0"
+          />
+
+          <label for="rotate">Градус наклона:</label>
+          <input
+            type="range"
+            name="rotate"
+            id="rotate"
+            value="0"
+            min="0"
+            max="360"
+          />
+        </div>
+        <div class="object"></div>
+      </div>
+      <div class="result">
+        <div class="css">
+          <p>width: 50px</p>
+          <p>height: 50px</p>
+          <p>background-color: rgb(0, 0, 0)</p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+        </div>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <span>
+            <p>CREDIT CARD DETAILS</p>
+            <div class="card">
+                <form action="#">
+
+                    <label for="c-numb">Card Number</label>
+                    <input type="text" name="c-numb" id="c-numb" required maxlength="16"
+                        placeholder="1111 1111 1111 1111">
+
+                    <label for="card-name">Name On Card</label>
+                    <input type="text" name="card-name" id="card-name" required maxlength="16"
+                        placeholder="Name Surname">
+
+                    <div class="row">
+                        <label for="month">Expiry Date</label>
+                        <label for="cvv">CVV / CVN</label>
+                    </div>
+
+                    <div class="exp">
+                        <input type="text" name="month" id="month" required maxlength="2" placeholder="02">
+
+                        <input type="text" name="year" id="year" required maxlength="4" placeholder="2017">
+
+                        <input type="password" name="cvv" id="cvv" required maxlength="3" placeholder="***">
+                    </div>
+                    <div class="img">
+                        <img src="./moon_flag.png" alt="">
+                    </div>
+            </div>
+            </form>
+    </div>
+
+    </span>
+</body>
+
+</html>

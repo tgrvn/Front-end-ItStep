@@ -1,0 +1,40 @@
+
+body {
+    margin: 0;
+}
+
+p {
+    font-size: 3.5rem;
+    display: block;
+    text-align: center;
+    margin: 9%;
+    font-weight: 600;
+}
+
+.wrap {
+    margin: 7% auto;
+    width: 80%;
+}
+
+.player_01, .player_02 {
+    width: 90%;
+    margin: auto;
+}
+.card {
+    width: 150px;
+    height: 90px;
+    background-color:rgb(206, 203, 203);
+    display: inline-block;
+    border-radius: 20% 20% 0 0;
+    margin: 0 2% 0 0;
+}
+
+.bl {
+    color: rgb(19, 19, 19);
+}
+
+.red {
+    color: rgb(201, 0, 0);
+}
+
+

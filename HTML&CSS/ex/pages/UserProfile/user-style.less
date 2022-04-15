@@ -1,0 +1,346 @@
+// reset
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Dongle", sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+::selection {
+    color: @text-white;
+    background-color: @color-quaternary;
+}
+
+// colors
+@color-primary: #448b00;
+@color-secondary: #dcab42;
+@color-tertiary: #274d97;
+@color-quaternary: #c32056;
+@color-select: #f0c25f;
+@bc-light: #f6f6f6;
+@bc-dark: #eaeaea;
+@text-dark: #212121;
+@text-muted: #9f9f9f;
+@text-white: #fff;
+
+.wrapper {
+  color: @text-dark;
+  display: flex;
+  position: relative;
+  max-width: 2000px;
+  min-width: 550px;
+  width: 100%;
+
+  & > [type="checkbox"] {
+    display: none;
+  }
+
+  #btn_menu:checked + .nav {
+    width: 15%;
+    min-width: 220px;
+    padding: 2rem 1rem;
+    .mixin-shadow();
+  }
+
+  .nav {
+    background-color: @bc-light;
+    padding: 2rem 1rem;
+    width: 15%;
+    .mixin-shadow();
+    z-index: 1;
+    min-width: 220px;
+    transition: 0.3s;
+
+    h2 {
+      font-size: 2rem;
+      text-transform: capitalize;
+    }
+
+    .nav-menu {
+      border-top: @text-dark 1px solid;
+      margin: 2rem -1rem;
+      padding: 2rem 2rem 1rem 1rem;
+
+      li:nth-of-type(2) {
+        background-color: @color-quaternary;
+        color: @text-white;
+
+        svg {
+          fill: @text-white;
+        }
+      }
+
+      li {
+        text-transform: capitalize;
+        padding: 0.5rem 1rem;
+        margin: 0.5rem 0;
+        width: 100%;
+        transition: 0.3s;
+
+        a {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+        }
+
+        svg {
+          width: 20px;
+          height: 20px;
+          fill: @text-muted;
+        }
+
+        &:hover {
+          background-color: @color-quaternary;
+          color: @text-white;
+        }
+
+        &:hover svg {
+          fill: @text-white;
+        }
+      }
+    }
+  }
+
+  .section {
+    background-color: @bc-dark;
+    width: 100%;
+    padding: 2rem;
+
+    .main {
+      margin: 2rem 0 0 0;
+      display: flex;
+      gap: 5rem 1rem;
+      flex-wrap: wrap-reverse;
+      align-items: flex-end;
+
+      form {
+        margin: 3rem 0 0 0;
+        width: 60%;
+        flex-grow: 1;
+        // min-width: 620px;
+        .mixin-shadow();
+
+
+        label {
+          color: @text-muted;
+        }
+
+        .form-head {
+          background-color: @color-quaternary;
+          color: @text-white;
+          padding: 1rem;
+          margin: -3.5rem 0 0 0;
+        }
+
+        background-color: @bc-light;
+        padding: 1.5rem;
+
+        .col {
+          display: flex;
+          flex-direction: column;
+          flex-grow: 1;
+          padding: 1rem 0;
+          gap: 1rem;
+
+          [type="text"],
+          [type="email"],
+          [type="number"],
+          textarea {
+            width: 100%;
+          }
+        }
+
+        .row {
+          display: flex;
+          gap: 2rem;
+        }
+
+        textarea {
+          resize: vertical;
+          max-height: 300px;
+          min-height: 100px;
+        }
+
+        .subm {
+          text-align: right;
+          [type="submit"] {
+            border: none;
+            background-color: @color-quaternary;
+            color: @text-white;
+            padding: 0.5rem 4rem;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: 0.3s;
+
+            &:hover {
+                box-shadow: 3px 3px 5px 1px @text-muted;
+            }
+
+            &:active {
+              filter: brightness(1.1);
+              box-shadow: 4px 4px 7px 2px @text-muted;
+            }
+          }
+        }
+
+        input,
+        textarea {
+          background-color: transparent;
+          outline: none;
+          border: none;
+          border-bottom: 1px solid @text-dark;
+          flex-grow: 1;
+        }
+      }
+
+      .descr {
+        margin: 3rem 0 0 0;
+        background-color: @bc-light;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 35%;
+        flex-grow: 1;
+        padding: 2rem;
+        height: max-content;
+        gap: 1rem;
+        min-width: 370px;
+        .mixin-shadow();
+        transition: 0.3s;
+
+        p:nth-of-type(1) {
+            text-transform: uppercase;
+            color: @text-muted;
+        }
+
+        h3 {
+            text-transform: capitalize;
+        }
+
+        .photo {
+          margin: -6rem 0 0 0;
+          background-image: url(./assets/avatar.jfif);
+          border-radius: 50%;
+          width: 200px;
+          height: 200px;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+          .mixin-shadow();
+          pointer-events: none;
+        }
+      }
+    }
+
+    .burger {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .burger_menu {
+        display: none;
+        position: relative;
+
+        label {
+          display: block;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+        }
+
+        img {
+          width: 30px;
+          height: 20px;
+        }
+      }
+
+      h2 {
+        font-size: 2rem;
+        text-transform: capitalize;
+      }
+    }
+
+    .sec-footer {
+      display: flex;
+      justify-content: space-between;
+      padding: 2rem 0;
+      margin: 3rem 0 0 0;
+      border-top: @text-dark solid 1px;
+
+      ul {
+        display: flex;
+        gap: 2rem;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+
+      li:hover {
+        border-bottom: @text-dark 1px solid;
+      }
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .nav {
+      width: 0;
+      overflow: hidden;
+      min-width: 0;
+      padding: 0;
+      box-shadow: none;
+      position: fixed;
+      z-index: 2;
+      height: 100%;
+    }
+    .section {
+      padding: 0 2rem;
+      .burger {
+        position: sticky;
+        top: 0;
+        background-color: @bc-dark;
+        .mixin-shadow;
+        margin: 0 -2rem;
+        padding: 1rem;
+        z-index: 1;
+        .burger_menu {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.mixin-shadow (@bc: #c0c0c0) {
+  box-shadow: 2px 2px 2px 2px @bc;
+  transition: 0.3s;
+  &:hover {
+    box-shadow: 3px 3px 4px 4px @bc;
+  }
+}

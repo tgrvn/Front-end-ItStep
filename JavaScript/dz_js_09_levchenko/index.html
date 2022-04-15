@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .ex3 {
+        width: max-content;
+        display: flex;
+        gap: 1rem;
+        margin: 2rem auto;
+      }
+
+      .trafic-lights {
+        display: flex;
+        gap: 1rem;
+        padding: 1rem;
+        border: 2px solid gray;
+        border-radius: 5px;
+      }
+
+      .light {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: gray;
+        transition: 0.3s;
+      }
+
+      .green,
+      .red,
+      .yellow {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+
+      .green {
+        background-color: green;
+        box-shadow: 0px 0px 10px 1px green;
+      }
+
+      .yellow {
+        background-color: yellow;
+        box-shadow: 0px 0px 10px 1px yellow;
+      }
+
+      .red {
+        background-color: red;
+        box-shadow: 0px 0px 10px 1px red;
+      }
+
+      .switch-lights {
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .bckg {
+        background-color: aqua;
+        cursor: pointer;
+      }
+
+      .book {
+        cursor: pointer;
+        padding: 0.2rem;
+        font-size: 1.3rem;
+        width: max-content;
+      }
+
+      .ex6 {
+        margin: 5rem auto;
+        text-align: center;
+        width: max-content;
+        display: flex;
+        gap: 4rem;
+      }
+
+      .btn {
+        position: relative;
+      }
+
+      .btn-tooltip {
+        position: absolute;
+        padding: 1rem;
+        background-color: darkblue;
+        color: wheat;
+        top: -80px;
+        left: -5px;
+        height: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+
+      .btn-tooltip-show-small {
+        position: absolute;
+        padding: 1rem;
+        background-color: darkblue;
+        color: wheat;
+        top: -80px;
+        left: -5px;
+        height: max-content;
+        overflow: unset;
+      }
+
+      .btn-tooltip-show-small::after {
+        content: '';
+        display: block;
+        width: 15px;
+        height: 15px;
+        background-color: darkblue;
+        transform: rotate(45deg);
+        position: absolute;
+        left: 26px;
+        top: 39px;
+      }
+
+      .btn-tooltip-show-big {
+        position: absolute;
+        padding: 1rem;
+        background-color: darkblue;
+        color: wheat;
+        top: 23px;
+        left: -30px;
+        height: max-content;
+        overflow: unset;
+        display: block;
+      }
+
+      .btn-tooltip-show-big::after {
+        content: '';
+        display: block;
+        width: 15px;
+        height: 15px;
+        background-color: darkblue;
+        transform: rotate(45deg);
+        position: absolute;
+        left: 50px;
+        top: -7px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ex3">
+      <div class="trafic-lights">
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+      </div>
+      <button class="switch-lights">Next</button>
+    </div>
+
+    <div class="ex5">
+      <ol>
+        <li class="book">
+          Lorem ipsum dolor sit, amet consectetur adipisicing.
+        </li>
+        <li class="book">
+          Ipsum ullam accusamus, consequuntur harum eligendi quos!
+        </li>
+        <li class="book">Non esse quia animi, neque nulla totam.</li>
+        <li class="book">
+          Saepe earum provident quidem, laudantium consequatur cupiditate.
+        </li>
+        <li class="book">
+          Ipsam officia doloremque enim eos, iure perferendis!
+        </li>
+        <li class="book">Quae, sunt officiis. Dolorum optio commodi velit?</li>
+        <li class="book">Autem, commodi harum! Minima ipsam numquam fuga!</li>
+      </ol>
+    </div>
+
+    <div class="ex6">
+      <button class="btn">
+        button 1
+        <p class="btn-tooltip">Tooltip</p>
+      </button>
+      <button class="btn">
+        <p class="btn-tooltip">TOOOOOLTIP</p>
+        button 1
+      </button>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>

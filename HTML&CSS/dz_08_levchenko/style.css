@@ -1,0 +1,225 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #212121;
+}
+
+h1, h2, h3, p, li {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* header */
+
+.header {
+    width: 100%;
+    background-color: #FF7043;
+    text-align: center;
+    padding: 2%;
+}
+
+.header h1 {
+    text-shadow: 0 1px 3px #212121;
+    font-size: 1.8rem;
+}
+
+.header h2 {
+    margin: 1% 0 10px 0;
+    color: #fff;
+    text-shadow: 0 1px 3px #212121;
+    font-size: 1.6rem;
+}
+
+/* content */
+
+
+.left, .right {
+    display: inline-block;
+    max-width: 630px;
+    padding: 5px 0;
+    vertical-align: top;
+    margin: 3% auto;
+}
+
+.right {
+    margin: 3% 0 0 5%;
+}
+
+
+h3 {
+    font-size: 1.3rem;
+    text-decoration: underline;
+    margin: 0 0 2% 0;
+}
+
+.ico {
+    width: 100px;
+    height: 60px;
+    float: right;
+    background-color: red;
+    border-radius: 20px;
+    position: relative;
+    margin: 4%;
+}
+
+.youtube {
+    width: 40px;
+    height: 40px;
+    background-color: red;
+    border: 20px solid red;
+    border-left: 20px solid #fff;
+    position: absolute;
+    top: 10px;
+    left: 45px;
+}
+
+/* popular courses */
+
+.wrapper .card_block {
+    width: 100%;
+}
+
+.card_block h3 {
+    text-align: center;
+    margin: 0 0 4% 0;
+}
+
+.card_block div:not(:first-of-type) {
+    margin: 0 0 0 4%;
+}
+
+.card_block div:nth-of-type(1) .card {
+    background-color: #FF7043;
+    border: 3px solid #D84315;
+}
+
+.card_block div:nth-of-type(2) .card {
+    background-color: #C62828;
+    border: 3px solid #B71C1C;
+}
+
+.card_block div:nth-of-type(3) .card {
+    background-color: #283593;
+    border: 3px solid #1A237E;
+}
+
+.card_block div:nth-of-type(4) .card {
+    background-color: #6A1B9A;
+    border: 3px solid #4A148C;
+}
+
+
+.card_block div:nth-of-type(5) .card {
+    background-color: #2E7D32;
+    border: 3px solid #1B5E20;
+}
+
+.wrapper .block {
+    height: 300px;
+    max-width: 220px;   
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.block p {
+    text-align: left;
+    margin: 15px 0 0 0;
+}
+
+.card {
+    height: 150px;
+    
+    border-top-right-radius: 20px;
+    vertical-align: middle;
+    line-height: 150px;
+    position: relative;
+}
+
+.card p {
+    text-align: center;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    line-height: 30px;
+    font-size: 0.7rem;
+    font-weight: 900;
+    position: absolute;
+    top: -10px;
+    height: 30px;
+    width: 120px;
+    background-color: #FDD835;
+}
+
+.card_block  h2 {
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.block .price {
+    font-weight: 800;
+    text-align: right;
+    margin: 20px 0 0 0;
+}
+
+.hr {
+    width: 100%;
+    height: 1px;
+    background-color: #212121;
+    margin: 4% 0 0 0;
+}
+
+.footer {
+    background-color: #BDBDBD;
+    width: 100%;
+    padding: 2%;
+}
+
+.footer ul {
+    display: inline-block;
+    list-style: none;
+    vertical-align: middle;
+}   
+
+.footer ul li:nth-of-type(1) {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 15px 0;
+    text-decoration: underline;
+}
+
+.footer ul:not(:first-child) {
+    margin: 0 0 0 20%;
+}
+
+.res {
+    background-color: #212121;
+    color: #fff;
+    height: 30px;
+}
+
+sup {
+    font-size: 0.5rem;
+}
+
+.res p {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.res p:nth-of-type(1) {
+    margin: 0 0 0 5%;
+}
+
+.res p:nth-of-type(2) {
+    margin: 0 0 0 65%;
+}

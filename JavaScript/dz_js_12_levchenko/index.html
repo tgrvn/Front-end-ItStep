@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background-color: #424242;
+      }
+
+      .player {
+        min-width: 1400px;
+        height: 100vh;
+        padding: 0.1px;
+        background-color: #424242;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .div {
+        width: 130px;
+        height: 130px;
+        background-color: red;
+      }
+
+      .songs {
+        max-width: 1300px;
+        height: max-content;
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        background-color: #212121;
+        padding: 2rem;
+        margin: 2rem auto;
+        border-radius: 10px;
+      }
+
+      .songs > div {
+        width: 200px;
+        text-align: center;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem 0;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      .songs > div > p {
+        margin: 0;
+        width: 100%;
+        transition: 0.3s;
+      }
+
+      .songs > div > img {
+        border-radius: 10px;
+        pointer-events: none;
+        transition: 0.3s;
+      }
+
+      .songs > div:hover > p {
+        text-shadow: 0 0 10px #fff;
+      }
+
+      .songs > div:hover > img {
+        box-shadow: 0 0 10px 4px #fff;
+      }
+
+      .audio {
+        width: 100%;
+        height: 200px;
+        background-color: #212121;
+        display: flex;
+      }
+
+      .audio > div {
+        width: 100%;
+      }
+
+      .audio > img {
+        padding: 1rem;
+        border-radius: 20px;
+      }
+
+      .range {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        padding: 0 2rem;
+        color: #fff;
+      }
+
+      .range-line {
+        width: 1150px;
+        height: 8px;
+        border-radius: 20px;
+        background-color: #616161;
+        position: relative;
+      }
+
+      .range-dot {
+        width: 16px;
+        height: 16px;
+        background-color: #fff;
+        border-radius: 50%;
+        position: absolute;
+        top: -4px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .nav {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        padding: 1.5rem 2.5rem;
+      }
+
+      .btns {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+      }
+
+      .pause {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 4px solid #fff;
+        position: relative;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .pause::after {
+        content: '';
+        display: block;
+        width: 10px;
+        height: 30px;
+        border-left: 4px solid #fff;
+        border-right: 4px solid #fff;
+        position: absolute;
+        top: 11px;
+        left: 17px;
+      }
+
+      .play {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 4px solid #fff;
+        position: relative;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .play::after {
+        content: '';
+        display: block;
+        border: 14px solid transparent;
+        border-top: 20px solid #fff;
+        transform: rotate(-90deg);
+        position: absolute;
+        top: 9px;
+        left: 22px;
+      }
+
+      .previous,
+      .next {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        position: relative;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .previous:hover,
+      .next:hover,
+      .play:hover,
+      .pause:hover {
+        box-shadow: 0 0 5px 2px #fff;
+        transform: scale(1.1);
+      }
+
+      .previous::after {
+        content: '';
+        display: block;
+        width: 14px;
+        height: 14px;
+        transform: rotate(-135deg);
+        position: absolute;
+        border-top: 2px solid #fff;
+        border-right: 2px solid #fff;
+        top: 10px;
+        left: 14px;
+      }
+
+      .next::after {
+        content: '';
+        display: block;
+        width: 14px;
+        height: 14px;
+        transform: rotate(45deg);
+        position: absolute;
+        border-top: 2px solid #fff;
+        border-right: 2px solid #fff;
+        top: 10px;
+        left: 6px;
+      }
+
+      .audio-name {
+        color: #fff;
+        margin: 0 0 0 8rem;
+      }
+
+      .volume {
+        height: max-content;
+        width: max-content;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .volume > img {
+        width: 25px;
+        height: 25px;
+        fill: #fff;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .volume > img:hover {
+        transform: scale(1.3);
+      }
+
+      /* .volume-range-l {
+        height: 4px;
+        width: 100px;
+        border-radius: 20px;
+        background-color: #616161;
+        position: relative;
+      }
+
+      .volume-dot {
+        height: 6px;
+        width: 6px;
+        border-radius: 50%;
+        background-color: #fff;
+        position: absolute;
+        top: -1px;
+        left: 0;
+        cursor: pointer;
+      } */
+
+      [type='range'] {
+        width: 100%;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+      }
+
+      [type='range']::-webkit-slider-runnable-track {
+        height: 8px;
+        background-color: #616161;
+      }
+      [type='range']::-webkit-slider-thumb {
+        background: #fff;
+        /* border: 1px solid cyan; */
+        border-radius: 50%;
+        cursor: pointer;
+        width: 15px;
+        height: 15px;
+        -webkit-appearance: none;
+        margin-top: -4px;
+        transition: 0.3s;
+      }
+
+      [type='range']::-webkit-slider-thumb:hover {
+        transform: scale(1.2);
+        box-shadow: 0 0 8px 0.5px #fff;
+      }
+
+      [type='range']::-moz-range-track {
+        border-radius: 10px/100%;
+        height: 5px;
+        border: 1px solid cyan;
+        background-color: #fff;
+      }
+
+      [type='range']::-moz-range-thumb {
+        background: #ecf0f1;
+        border: 1px solid cyan;
+        border-radius: 10px/100%;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="player">
+      <div class="songs">
+        <div>
+          <img src="./img/img-1.jpg" alt="" />
+          <p>Naruto Shippuden - Samidare (ksolis Trap Remix)</p>
+        </div>
+        <div>
+          <img src="./img/img-2.jpg" alt="" />
+          <p>Demon Slayer - Zenitsu Kyogoku House (Trap Version)</p>
+        </div>
+        <div>
+          <img src="./img/img-3.jpg" alt="" />
+          <p>Lost Forever - Demon Slayer [Kokushibo/Tiktok]</p>
+        </div>
+        <div>
+          <img src="./img/img-4.jpg" alt="" />
+          <p>Attack on Titan - Betrayal [Remix] (Prod. Odece)</p>
+        </div>
+        <div>
+          <img src="./img/img-5.jpg" alt="" />
+          <p>Naruto Shippuden - Nightfall & Despair (NKZ Remix)</p>
+        </div>
+        <div>
+          <img src="./img/img-6.jpg" alt="" />
+          <p>Demon Slayer - Zenitsu Theme (Hip Hop / Trap Remix)</p>
+        </div>
+        <div>
+          <img src="./img/img-7.jpg" alt="" />
+          <p>My War (Attack on Titan)</p>
+        </div>
+        <div>
+          <img src="./img/img-8.jpg" alt="" />
+          <p>Tokyo Ghoul | Hip Hop & Rap Instrumental | Prod. FVBS</p>
+        </div>
+        <div>
+          <img src="./img/img-9.jpg" alt="" />
+          <p>Tokyo Ghoul Final Fight [AMV] Midnight</p>
+        </div>
+        <div>
+          <img src="./img/img-10.jpg" alt="" />
+          <p>Naruto - Loneliness (Riki リキ Remix)</p>
+        </div>
+      </div>
+
+      <div class="audio">
+        <img src="./img/img-1.jpg" alt="" />
+        <div>
+          <div class="nav">
+            <div class="btns">
+              <div class="previous"></div>
+              <div class="play"></div>
+              <div class="next"></div>
+              <p class="audio-name"></p>
+            </div>
+            <div class="volume">
+              <img src="./img/unmute.svg" alt="" />
+              <input type="range" min="10" max="100" value="50" />
+            </div>
+          </div>
+          <div class="range">
+            <p class="current-time">00:00</p>
+            <input type="range" min="0" value="0" />
+            <p class="duration">00:00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>

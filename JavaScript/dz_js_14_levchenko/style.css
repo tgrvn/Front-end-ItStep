@@ -1,0 +1,178 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #141e27;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+p {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: #eee;
+}
+.header {
+  background-color: #203239;
+  color: #eee;
+}
+.header .logo {
+  display: block;
+  font-family: 'Hurricane', cursive;
+  font-size: 3rem;
+  cursor: pointer;
+  width: max-content;
+  margin: 0 auto;
+}
+.main {
+  width: 600px;
+  height: max-content;
+  margin: 3rem auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: center;
+}
+.main form,
+.main .reg-message,
+.main .user-cabinet {
+  height: max-content;
+  padding: 2rem 3rem;
+  background-color: #e0ddaa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  border: 1px solid #cfd8dc;
+  border-radius: 5px;
+}
+.main form input,
+.main .reg-message input,
+.main .user-cabinet input {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #203239;
+  border-radius: 5px;
+}
+.main form .invalid,
+.main .reg-message .invalid,
+.main .user-cabinet .invalid {
+  border: 2px solid #f44336;
+  position: relative;
+}
+.main form .invalid::before,
+.main .reg-message .invalid::before,
+.main .user-cabinet .invalid::before {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: #f44336;
+}
+.main form .invalid::placeholder,
+.main .reg-message .invalid::placeholder,
+.main .user-cabinet .invalid::placeholder {
+  color: #f44336;
+}
+.main form .error,
+.main .reg-message .error,
+.main .user-cabinet .error {
+  font-size: 0.7rem;
+  color: #f44336;
+}
+.main form .login-btn,
+.main .reg-message .login-btn,
+.main .user-cabinet .login-btn {
+  border: none;
+  background-color: #203239;
+  color: #eee;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.main form .login-btn:hover,
+.main .reg-message .login-btn:hover,
+.main .user-cabinet .login-btn:hover {
+  background-color: #141e27;
+}
+.main form .login-btn:active,
+.main .reg-message .login-btn:active,
+.main .user-cabinet .login-btn:active {
+  filter: brightness(0.4);
+}
+.main form .message,
+.main .reg-message .message,
+.main .user-cabinet .message {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.main .reg-message {
+  display: none;
+}
+.main .row {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.main .row .create-btn {
+  border: 4px solid #203239;
+  background-color: transparent;
+  padding: 1rem 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+  color: #141e27;
+}
+.main .row .create-btn:hover {
+  background-color: #203239;
+  color: #eee;
+}
+.main .row .create-btn:active {
+  filter: brightness(0.4);
+}
+.cabinet {
+  min-width: 600px;
+  height: max-content;
+  width: 90%;
+  transition: 0.3s;
+}
+.cabinet .user-cabinet {
+  width: 100%;
+}
+.cabinet .user-cabinet .row {
+  display: flex;
+  flex-direction: row;
+  gap: 0 4rem;
+}
+.cabinet .user-cabinet .row .col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cabinet .user-cabinet .row .col img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+.hide {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  height: 0;
+  transition: 0.3s;
+}

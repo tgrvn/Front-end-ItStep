@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hubballi&family=League+Spartan&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: 'Hubballi', cursive;
+        font-family: 'League Spartan', sans-serif;
+        background-color: #eceff1;
+      }
+
+      .wrapper {
+        width: 100%;
+        height: 100vh;
+        padding: 3rem 4rem;
+        background-color: #eceff1;
+        display: flex;
+        gap: 3rem 0;
+        justify-content: space-between;
+        align-items: stretch;
+        flex-wrap: wrap;
+      }
+
+      .books {
+        width: max-content;
+        padding: 1rem;
+        background-color: #b0bec5;
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .current-b {
+        width: 300px;
+        height: max-content;
+        padding: 1rem;
+        background-color: #eceff1;
+        box-shadow: 0px 0px 5px 1px #607d8b;
+        position: relative;
+      }
+
+      .img {
+        width: 100%;
+        height: 350px;
+        background-color: red;
+      }
+
+      .b-cover {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        pointer-events: none;
+      }
+
+      .cost {
+        font-size: 1.3rem;
+        position: absolute;
+        right: 1rem;
+        bottom: 4rem;
+      }
+
+      .select {
+        width: 100%;
+        height: 30px;
+        margin: 1rem 0;
+        background-color: #455a64;
+        border: none;
+        color: #fff;
+        font-weight: 600;
+        letter-spacing: 0.3rem;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .select:hover {
+        background-color: #607d8b;
+        box-shadow: 0px 0px 5px 1px #607d8b;
+      }
+
+      .select:active {
+        background-color: #90a4ae;
+      }
+
+      .b-buy {
+        width: max-content;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem 0;
+        background-color: #b0bec5;
+        padding: 1rem 1rem;
+      }
+
+      .row {
+        display: flex;
+        justify-content: space-between;
+        gap: 0 2rem;
+        align-items: baseline;
+      }
+
+      #bname,
+      #quant,
+      #uname,
+      #deliv,
+      #ddate {
+        width: 220px;
+        outline: none;
+        border: none;
+      }
+
+      #bname {
+        background-color: #E0E0E0;
+        cursor: default;
+      }
+
+      textarea {
+        max-width: 220px;
+        min-width: 220px;
+        height: 130px;
+        resize: none;
+        outline: none;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="books"></div>
+
+      <form name="buy" class="b-buy" return false>
+        <div class="row">
+          <label for="bname">Book:</label>
+          <input type="text" name="bname" id="bname" readonly required/>
+        </div>
+        <div class="row">
+          <label for="quant">Quantity:</label>
+          <input type="text" name="quant" id="quant" required/>
+        </div>
+        <div class="row">
+          <label for="uname">Name:</label>
+          <input type="text" name="uname" id="uname" required/>
+        </div>
+        <div class="row">
+          <label for="deliv">Delivery address:</label>
+          <textarea name="deliv" id="deliv" cols="30" rows="10" required></textarea>
+        </div>
+        <div class="row">
+          <label for="ddate">Delivery date:</label>
+          <input type="date" name="ddate" id="ddate" required/>
+        </div>
+        <div class="row">
+          <label for="comm">Comment:</label>
+          <textarea name="comm" id="comm" cols="30" rows="10"></textarea>
+        </div>
+        <input class="select" type="submit" value="Buy" />
+      </form>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cabinet page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hurricane&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <a class="logo" href="#">Test Site</a>
+    </div>
+
+    <div class="main">
+      <h2></h2>
+      <div class="row cab-info">
+        <img class="avatar" src="../img/avatar.png" alt="" />
+        <div class="col">
+          <p class="login"></p>
+          <p class="email"></p>
+        </div>
+        <button class="btn-dark exit">Exit</button>
+      </div>
+
+      <div class="cabinet hide">
+        <p>Testfname Testlname</p>
+        <p>birth: 1010-10-10</p>
+        <p>Male</p>
+        <p>+380967901634</p>
+        <p>life:aaaaa</p>
+      </div>
+
+      <form class="info" name="info">
+        <div class="row">
+          <input type="text" name="fName" id="fName" placeholder="Firsth name" />
+          <input type="text" name="lName" id="lName" placeholder="Last name" />
+        </div>
+
+        <div class="row">
+          <input
+            type="text"
+            name="birth"
+            id="birth"
+            placeholder="Birthday (YYYY-MM-DD)"
+          />
+          <select name="gender" id="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="another">Another</option>
+          </select>
+        </div>
+
+        <div class="row">
+          <input
+            type="text"
+            name="phone"
+            id="phone"
+            placeholder="Phone number"
+          />
+          <input type="text" name="skype" id="skype" placeholder="Skype" />
+        </div>
+
+        <p class="error hide">*test error</p>
+
+        <input class="btn-dark" type="submit" value="SAVE INFO" />
+      </form>
+    </div>
+
+    <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
+    <script src="../utils/validation.js"></script>
+    <script src="../utils/user.js"></script>
+    <script src="./cabinet.js"></script>
+  </body>
+</html>
