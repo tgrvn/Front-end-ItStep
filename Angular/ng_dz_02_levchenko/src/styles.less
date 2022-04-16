@@ -1,0 +1,45 @@
+/* You can add global styles to this file, and also import other style files */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  background-color: var(--primary-color-bc);
+  
+  &::-webkit-scrollbar {
+    width: 15px;
+    height: 15px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: var(--primary-color-bc);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(45deg, var(--secondary-color-bc), var(--border-n-shadow));
+    border-radius: 5px;
+  }
+}
+
+:root {
+  --primary-color-bc: #212121;
+  --secondary-color-bc: #711A75;
+  --input-color-bc: #ECEFF1;
+  --border-n-shadow: #B667F1;
+  --color-text: #fff;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

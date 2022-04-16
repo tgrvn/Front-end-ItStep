@@ -1,0 +1,11 @@
+<div class="container">
+    <app-input (inputChanges)="getNameDrink($event)"></app-input>
+
+    <div class="drinks">
+        <app-drink-card *ngFor="let drink of drinks" [currDrinks]="drink" [routerLink]="drink.idDrink"></app-drink-card>
+        <div class="break"></div>
+        <div class="break"></div>
+    </div>
+</div>
+
+<router-outlet></router-outlet>

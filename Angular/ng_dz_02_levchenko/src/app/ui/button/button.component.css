@@ -1,0 +1,20 @@
+button {
+  padding: 2rem;
+  width: 600px;
+  background-color: transparent;
+  border: none;
+  outline: 5px solid var(--border-n-shadow);
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  color: var(--color-text);
+  transition: 0.3s;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: var(--secondary-color-bc);
+  box-shadow: 2px 2px 20px 7px var(--border-n-shadow);
+  outline: 2px solid var(--border-n-shadow);
+}
