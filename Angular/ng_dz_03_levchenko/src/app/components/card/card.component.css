@@ -1,0 +1,27 @@
+.card {
+  width: 200px;
+  height: 300px;
+  padding: 1rem;
+  outline: 5px solid var(--card-color-bc);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color-bc);
+  transition: 0.3s;
+  cursor: pointer;
+}
+.card:hover {
+  outline: 2px solid var(--card-color-bc);
+  box-shadow: 0 0 15px 3px var(--svg-color);
+}
+.card .img {
+  width: 100%;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 40%;
+}
+.card .img_ingame {
+  background-image: url(../../../assets/svg/cat.svg);
+}

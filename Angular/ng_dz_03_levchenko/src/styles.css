@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  box-sizing: border-box;
+}
+:root {
+  --secondary-color-bc: #212121;
+  --primary-color-bc: #424242;
+  --card-color-bc: #6A1B9A;
+  --svg-color: #AB47BC;
+  --color-text: #fff;
+}
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+}
+body::-webkit-scrollbar {
+  width: 15px;
+  height: 15px;
+}
+body::-webkit-scrollbar-track {
+  background-color: var(--secondary-color-bc);
+}
+body::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(45deg, var(--svg-color), var(--card-color-bc));
+  border-radius: 5px;
+}

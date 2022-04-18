@@ -1,0 +1,5 @@
+<div class="card" *ngIf="card" (click)="handleClick($event)" [ngStyle]="card.isShow ? {'transform': 'rotateY(180deg)'} : {}">
+    <div class="img" [ngClass]="{
+        'img_ingame': !card.isShow
+    }" [ngStyle]="card.isShow ? {'background-image': card.src} : {}"></div>
+</div>

@@ -1,0 +1,8 @@
+<div class="container">
+    <button (click)="handlerStart()" [disabled]="isStart">start</button>
+    <span class="points">{{points}}</span>
+    <div class="cards" *ngIf="cards.length === 8">
+        <app-card *ngFor="let card of cards" [card]="card" (cardClick)="handlerClick()"></app-card>
+    </div>
+
+</div>

@@ -1,0 +1,48 @@
+.container {
+  background-color: var(--secondary-color-bc);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem 0;
+  padding: 3rem;
+
+  button {
+    padding: 1rem 2rem;
+    width: 400px;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: none;
+    outline: 5px solid var(--card-color-bc);
+    border-radius: 10px;
+    color: var(--color-text);
+    font-weight: 700;
+    letter-spacing: 0.3rem;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: var(--card-color-bc);
+      outline: 2px solid var(--card-color-bc);
+      box-shadow: 0 0 15px 3px var(--svg-color);
+    }
+  }
+
+  .points {
+    color: var(--color-text);
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 0.3rem;
+    pointer-events: none;
+  }
+
+  .cards {
+    width: 1200px;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+  }
+}
