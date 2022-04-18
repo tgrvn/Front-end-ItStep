@@ -11,9 +11,18 @@ import { IDrink } from '../drinks/drinks.component';
 export class DrinkComponent implements OnInit {
 
   public drink!: IDrink[];
+  public ingridiends: string[] = [];
 
   public handlClick(): void {
     this.router.navigate(['cocktails'])
+  }
+
+  public getIngridienst(drink: any): void {
+    for (const key in drink) {
+      if (key.includes('strIngredient') && drink[key]) {
+        this.ingridiends.push(drink[key]);
+      }
+    }
   }
 
   constructor(
@@ -31,7 +40,7 @@ export class DrinkComponent implements OnInit {
             if (data) {
               const { drinks } = data;
               this.drink = drinks;
-              console.log(drinks);
+              this.getIngridienst(this.drink[0]);
             }
           })
       }

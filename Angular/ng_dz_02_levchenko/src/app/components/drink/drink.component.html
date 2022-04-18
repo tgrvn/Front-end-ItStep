@@ -5,22 +5,7 @@
         <div class="ingidients">
             <p class="head">INGRIDIENTS</p>
             <ul>
-                <li>{{drink[0].strIngredient1}}</li>
-                <li>{{drink[0].strIngredient1}}</li>
-                <li>{{drink[0].strIngredient2}}</li>
-                <li>{{drink[0].strIngredient3}}</li>
-                <li>{{drink[0].strIngredient4}}</li>
-                <li>{{drink[0].strIngredient5}}</li>
-                <li>{{drink[0].strIngredient6}}</li>
-                <li>{{drink[0].strIngredient7}}</li>
-                <li>{{drink[0].strIngredient8}}</li>
-                <li>{{drink[0].strIngredient9}}</li>
-                <li>{{drink[0].strIngredient10}}</li>
-                <li>{{drink[0].strIngredient11}}</li>
-                <li>{{drink[0].strIngredient12}}</li>
-                <li>{{drink[0].strIngredient13}}</li>
-                <li>{{drink[0].strIngredient14}}</li>
-                <li>{{drink[0].strIngredient15}}</li>
+                <li *ngFor="let item of ingridiends">{{item}}</li>
             </ul>
         </div>
         <p class="head">INSTRUCTION</p>
