@@ -4,5 +4,5 @@
     <div class="cards" *ngIf="cards.length === 8">
         <app-card *ngFor="let card of cards" [card]="card" (cardClick)="handlerClick()"></app-card>
     </div>
-
+    <router-outlet></router-outlet>
 </div>

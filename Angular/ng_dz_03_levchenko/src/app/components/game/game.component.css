@@ -6,6 +6,7 @@
   align-items: center;
   gap: 3rem 0;
   padding: 3rem;
+  position: relative;
 }
 .container button {
   padding: 1rem 2rem;

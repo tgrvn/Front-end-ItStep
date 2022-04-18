@@ -11,7 +11,7 @@ export class CardComponent implements OnInit {
   @Output() cardClick: EventEmitter<any> = new EventEmitter();
   @Input() card!: ICardGame;
 
-  public handleClick(event: any) {
+  public handleClick(event: any): void {
     if (this.card.isSelect) {
       return;
     }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, Routes } from '@angular/router';
 import { ICardGame } from '../utils/type';
 
 
@@ -13,7 +14,7 @@ export class GameComponent implements OnInit {
   public points: number = 0;
   public isStart: boolean = false;
 
-  public handlerClick() {
+  public handlerClick(): void {
     this.counterShow++;
     if (this.counterShow === 2) {
       const selectCards = this.cards.filter(
@@ -36,7 +37,7 @@ export class GameComponent implements OnInit {
         this.points += 2;
         if (this.points === this.cards.length) {
           setTimeout(() => {
-            alert('win');
+            this.routes.navigate(['/congratulation'])
           }, 500)
           this.points = 0;
           return;
@@ -62,7 +63,7 @@ export class GameComponent implements OnInit {
     console.log(this.counterShow);
   }
 
-  public handlerStart() {
+  public handlerStart(): void {
     this.cards = [];
     this.isStart = true;
     this.points = 0;
@@ -78,17 +79,17 @@ export class GameComponent implements OnInit {
         isShow: false,
       }));
       this.isStart = false;
-    }, 3000);
+    }, 2000);
   }
 
 
-  constructor() { }
+  constructor(public routes: Router) { }
 
   ngOnInit(): void {
     this.randomize();
   }
 
-  private randomize() {
+  private randomize(): void {
     const random = (max: number): number => {
       return Math.floor(Math.random() * (max - 1));
     };
