@@ -2,6 +2,6 @@ import './style.scss';
 
 export function TeamInfo() {
     return (
-        <div></div>
+        <div className='container'></div>
     );
 }

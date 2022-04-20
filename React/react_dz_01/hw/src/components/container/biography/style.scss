@@ -1,0 +1,37 @@
+.container {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+
+    .intro,
+    .bio {
+        padding: 1rem;
+    }
+
+    .intro {
+        text-align: center;
+
+        img {
+            margin: 1rem 0;
+            pointer-events: none;
+            border-radius: 50%;
+        }
+    }
+
+    .bio {
+
+        h2 {
+            text-transform: uppercase;
+        }
+    }
+
+    .timer {
+        background-color: var(--primary-color-bc);
+        font-weight: 600;
+        letter-spacing: 0.2rem;
+        width: max-content;
+        border-radius: 10px;
+        color: var(--white-color-text);
+        padding: 0.5rem;
+    }
+}
