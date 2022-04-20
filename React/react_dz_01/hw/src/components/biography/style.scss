@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+
+    .intro,
+    .bio {
+        padding: 1rem;
+    }
+
+    .intro {
+
+        img {
+            pointer-events: none;
+            border-radius: 50%;
+        }
+    }
+}
