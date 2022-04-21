@@ -26,3 +26,156 @@ export const biography = {
     },
   ],
 };
+
+export const team = [
+  {
+    id: 'bayern',
+    name: 'FC Bayern München',
+    country: 'Germany',
+    foundingDate: '1900.02.27',
+    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/FC_Bayern_München_logo_%282017%29.svg/1920px-FC_Bayern_München_logo_%282017%29.svg.png',
+    awards: {
+      UEFA_European_Cup: [
+        {
+          id: 'w1',
+          winner: '1973-1974',
+          goals: '30',
+        },
+        {
+          id: 'w2',
+          winner: '1974-1975',
+          goals: '27',
+        },
+        {
+          id: 'w3',
+          winner: '1975-1976',
+          goals: '32',
+        },
+        {
+          id: 'w4',
+          winner: '2000-2001',
+          goals: '34',
+        },
+        {
+          id: 'w5',
+          winner: '2012-2013',
+          goals: '24',
+        },
+        {
+          id: 'w3',
+          winner: '2019-2020',
+          goals: '28',
+        },
+        {
+          id: 'f1',
+          finalist: '1981-1982',
+          goals: '22',
+        },
+        {
+          id: 'f2',
+          finalist: '1981-1982',
+          goals: '20',
+        },
+        {
+          id: 'f3',
+          finalist: '1986-1987',
+          goals: '19',
+        },
+        {
+          id: 'f4',
+          finalist: '1998-1999',
+          goals: '24',
+        },
+        {
+          id: 'f5',
+          finalist: '2009-2010',
+          goals: '20',
+        },
+        {
+          id: 'f6',
+          finalist: '2011-2012',
+          goals: '21',
+        },
+      ],
+    },
+    squad: [
+      {
+        id: 1,
+        name: 'Christian Früchtl',
+        country: 'Germany',
+        number: '36',
+        role: 'GK',
+      },
+      {
+        id: 2,
+        name: 'Alphonso Davies',
+        country: 'Canada',
+        number: '19',
+        role: 'DEF',
+      },
+      {
+        id: 3,
+        name: 'Jamie Lawrence',
+        country: 'Germany',
+        number: '29',
+        role: 'DEF',
+      },
+      {
+        id: 4,
+        name: 'Bouna Sarr',
+        country: 'Senegal',
+        number: '20',
+        role: 'DEF',
+      },
+      {
+        id: 5,
+        name: 'Corentin Tolisso',
+        country: 'France',
+        number: '24',
+        role: 'MD',
+      },
+      {
+        id: 6,
+        name: 'Marc Roca',
+        country: 'Spain',
+        number: '22',
+        role: 'MD',
+      },
+      {
+        id: 7,
+        name: 'Jamal Musiala',
+        country: 'Germany',
+        number: '42',
+        role: 'MD',
+      },
+      {
+        id: 8,
+        name: 'Robert Lewandowski',
+        country: 'Poland',
+        number: '9',
+        role: 'FW',
+      },
+      {
+        id: 9,
+        name: 'Leroy Sané',
+        country: 'Germany',
+        number: '10',
+        role: 'FW',
+      },
+      {
+        id: 10,
+        name: 'Thomas Müller',
+        country: 'Germany',
+        number: '25',
+        role: 'FW',
+      },
+      {
+        id: 11,
+        name: 'Eric Maxim Choupo-Moting',
+        country: 'Cameron',
+        number: '13',
+        role: 'FW',
+      },
+    ],
+  },
+];
