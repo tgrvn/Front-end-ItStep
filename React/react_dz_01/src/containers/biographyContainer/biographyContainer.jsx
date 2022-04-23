@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { biography } from '../../data/data';
+import { biography } from '../../data/bio';
 import { Bio } from '../../components/biography/bio';
 
 export function BiographyCOntainer() {

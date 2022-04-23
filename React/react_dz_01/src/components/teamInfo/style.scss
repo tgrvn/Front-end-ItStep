@@ -1,0 +1,52 @@
+.container {
+    background-color: var(--fc-primary-bc);
+    color: var(--white-color-text);
+    padding: 2rem;
+
+    h2 {
+        font-size: 64px;
+        text-align: center;
+        margin: 2rem 0;
+    }
+
+    .teamInfo {
+        display: flex;
+        margin: 4rem 0;
+        gap: 4rem;
+
+        .left {
+            width: max-content;
+
+            img {
+                width: 500px;
+                height: 500px;
+            }
+        }
+
+        .rigth {
+            width: 100%;
+
+            h2 {
+                text-align: left;
+                margin: 0;
+                font-size: 48px;
+            }
+
+            .descr {
+                font-size: 24px;
+            }
+        }
+    }
+
+    .playerCards {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap: 4rem 1rem;
+
+        .break {
+            width: 400px;
+            height: 0;
+        }
+    }
+}

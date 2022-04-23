@@ -1,3 +1,7 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -11,7 +15,15 @@ h2 {
   margin: 0;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 :root {
   --primary-color-bc: #212121;
   --white-color-text: #fff;
+  --fc-primary-bc: #000e29;
+  --pet-bc-color: #6372C2;
 }

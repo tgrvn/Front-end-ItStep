@@ -1,8 +1,10 @@
 import { TeamInfo } from '../../components/teamInfo/teamInfo';
-import { team } from '../../data/data';
+import { PlayerCard } from '../..//components/playerCard/playerCard';
+import { team } from '../../data/team';
 
 export function TeamContainer() {
   const { awards } = team;
+  const { squad } = team;
 
   const achivments = awards.map((item) => {
     if (item.id.includes('w')) {
@@ -22,15 +24,13 @@ export function TeamContainer() {
     }
   });
 
-  // const { squad } = team;
-
-  // const teamSquad = squad.map((item) => {
-
-  // })
+  const player = squad.map((player) => (
+    <PlayerCard key={player.id} player={player} />
+  ));
 
   return (
     <>
-      <TeamInfo teamData={team} achivments={achivments} />
+      <TeamInfo teamData={team} achivments={achivments} playerCard={player} />
     </>
   );
 }

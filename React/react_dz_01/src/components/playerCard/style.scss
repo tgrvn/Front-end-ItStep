@@ -1,0 +1,43 @@
+.playerCard {
+    background: rgb(118, 35, 47);
+    background: linear-gradient(180deg, rgba(118, 35, 47, 1) 0%, rgba(169, 20, 46, 1) 66%, rgba(134, 4, 28, 1) 100%);
+    color: var(--white-color-text);
+    width: 400px;
+    height: max-content;
+    padding: 2rem;
+    position: relative;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+
+    img {
+        width: 330px;
+        height: 380px;
+        margin: 0 0 -5rem 0;
+        align-self: center;
+        justify-self: center;
+    }
+
+    .playerInfo {
+        h3 {
+            width: 100%;
+            font-size: 30px;
+            font-weight: 700;
+            margin: 10px 0;
+        }
+
+        .role {
+            font-size: 24px;
+            font-weight: 600;
+            margin: 0;
+        }
+    }
+
+    .number {
+        margin: 0;
+        font-size: 42px;
+        position: absolute;
+        right: 2rem;
+        font-weight: 800;
+    }
+}
