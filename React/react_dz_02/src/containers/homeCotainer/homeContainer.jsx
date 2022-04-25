@@ -1,12 +1,17 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Input } from '../../ui/input/input';
 import { Header } from '../../components/header/header';
 import { MagickBallContainer } from '../magickBallContainer/magickBallContainer';
 
 export function Home() {
+  const [theme, settheme] = useState('dark');
   const [error, seterror] = useState(false);
   const [errorMsg, seterrorMsg] = useState('');
   const [value, setvalue] = useState('');
+
+  useEffect(() => {
+    settheme('dark');
+  }, []);
 
   function checkString(str) {
     if (str.length <= 3) {
@@ -29,11 +34,16 @@ export function Home() {
     }
   }
 
+  function handlerChangeTheme() {
+    settheme('light');
+    console.log(theme);
+  }
+
   return (
     <>
-      <Header />
+      <Header changeTheme={handlerChangeTheme} theme={theme} />
       <Input createRequest={handlerInput} errorMsg={errorMsg} error={error} />
-      <MagickBallContainer value={value} />
+      <MagickBallContainer value={value} error={error} />
     </>
   );
 }

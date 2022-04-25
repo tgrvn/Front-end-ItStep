@@ -3,9 +3,7 @@
     height: 76px;
     background-color: #212121;
     border-bottom: 1px solid #fff;
-
-    img {
-        width: 150px;
-        height: 150px;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

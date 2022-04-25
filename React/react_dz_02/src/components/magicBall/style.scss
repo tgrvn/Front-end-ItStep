@@ -9,12 +9,6 @@
     border-radius: 50%;
     position: relative;
 
-    &:hover {
-        .ball::before {
-            transform: scale(1.2);
-        }
-    }
-
     .ball {
         width: 300px;
         height: 300px;

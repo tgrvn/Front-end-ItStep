@@ -2,12 +2,12 @@ import { useState } from 'react';
 import { getPrediction } from '../../services/predictions';
 import { Ball } from '../../components/magicBall/ball';
 
-export function MagickBallContainer({ value }) {
+export function MagickBallContainer({ value, error }) {
   const [prediction, setprediction] = useState(null);
   const answ = value;
 
   const getCurrentPrediction = () => {
-    if (answ) {
+    if (!error && answ) {
       getPrediction(answ).then((data) => {
         if (data) {
           setprediction(data);
