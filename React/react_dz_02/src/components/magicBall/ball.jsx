@@ -5,11 +5,11 @@ export function Ball(props) {
 
   return (
     <div className='ball-wrap' onClick={event}>
-      <div className='ball'>
-        <div className='volume'></div>
+      <div className='ball'></div>
+      <div className='volume'>
         <div className='triange'></div>
-        <p>{prediction && prediction.magic.answer}</p>
       </div>
+      <p className='prediction'>{prediction && prediction.magic.answer}</p>
     </div>
   );
 }

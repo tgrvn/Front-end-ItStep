@@ -4,7 +4,7 @@ import './style.scss';
 export function Header({ changeTheme, theme }) {
   return (
     <div className='header'>
-      <ThemeBtn changeTheme={changeTheme} theme={theme} />
+      <ThemeBtn changeTheme={changeTheme} theme={theme}/>
     </div>
   );
 }

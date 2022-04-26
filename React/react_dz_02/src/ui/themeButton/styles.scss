@@ -4,7 +4,16 @@ button {
     background-color: transparent;
     border: none;
     cursor: pointer;
+}
+
+.light {
     background-size: contain;
     background-repeat: no-repeat;
     background-image: url('../../assets/svg/moon-solid.svg');
+}
+
+.dark {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('../../assets/svg/sun-solid.svg');
 }
