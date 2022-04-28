@@ -1,26 +1,29 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { AddInputs } from '../components/addInputs/addInputs';
 import { TodoContext } from '../contexts/todoContext';
+import { validateHead, validateTxt, uid } from '../utils/validate';
 
 export function Add() {
   const { allTodos, setAllTodos } = useContext(TodoContext);
-  let head = '';
-  let descr = '';
+  const [head, setHead] = useState('');
+  const [descr, setDescr] = useState('');
 
   function handlerSaveTodo() {
-    head = '';
-    descr = '';
-    console.log('---> save');
+    if (validateHead(head) && validateTxt(descr)) {
+      const todo = {
+        head,
+        descr,
+      };
+      console.log('todo--->', todo);
+    }
   }
 
   function handlerTxtTodo({ target: { value } }) {
-    descr = value;
-    console.log('text--->', descr);
+    setDescr(value);
   }
 
   function handlerHeadTodo({ target: { value } }) {
-    head = value;
-    console.log('head--->', head);
+    setHead(value);
   }
 
   return (
@@ -29,6 +32,8 @@ export function Add() {
         saveTodo={handlerSaveTodo}
         txtTodo={handlerTxtTodo}
         headTodo={handlerHeadTodo}
+        head={head}
+        descr={descr}
       />
     </>
   );

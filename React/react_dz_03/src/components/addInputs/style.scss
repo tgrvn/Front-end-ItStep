@@ -1,0 +1,26 @@
+.inputs-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    padding: 50px 100px;
+
+    .inputs {
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px 0;
+
+        input,
+        textarea,
+        button {
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        textarea {
+            resize: none;
+            height: 100px;
+        }
+    }
+}
