@@ -27,7 +27,7 @@ export function Add() {
   }
 
   return (
-    <>
+    <div style={{overflowY: 'hidden'}}>
       <AddInputs
         saveTodo={handlerSaveTodo}
         txtTodo={handlerTxtTodo}
@@ -35,6 +35,6 @@ export function Add() {
         head={head}
         descr={descr}
       />
-    </>
+    </div>
   );
 }

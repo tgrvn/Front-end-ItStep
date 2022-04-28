@@ -4,7 +4,7 @@ export function AddInputs(props) {
   const { saveTodo, txtTodo, headTodo, head, descr } = props;
 
   return (
-    <div className='inputs-container'>
+    <div className='inputs-container animate__animated animate__fadeInUp'>
       <div className='inputs'>
         <input
           type='text'
