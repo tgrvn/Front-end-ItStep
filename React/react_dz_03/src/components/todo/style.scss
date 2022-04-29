@@ -1,0 +1,21 @@
+.todo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem 0;
+    min-height: 70vh;
+    padding: 50px 100px;
+    --animate-duration: 0.6s;
+
+    .todo {
+        border: 1px solid #212121;
+        padding: 10px;
+
+        .date {
+            font-size: 12px;
+            letter-spacing: 0.5px;
+            color: grey;
+        }
+    }
+}

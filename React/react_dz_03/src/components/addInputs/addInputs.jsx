@@ -1,10 +1,11 @@
 import './style.scss';
+import 'animate.css';
 
 export function AddInputs(props) {
   const { saveTodo, txtTodo, headTodo, head, descr } = props;
 
   return (
-    <div className='inputs-container animate__animated animate__fadeInUp'>
+    <div className='inputs-container animate__animated animate__fadeIn'>
       <div className='inputs'>
         <input
           type='text'

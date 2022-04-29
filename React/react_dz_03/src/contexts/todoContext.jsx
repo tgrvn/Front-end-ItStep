@@ -5,6 +5,10 @@ export const TodoContext = React.createContext([]);
 export default function TodoContextProvider({ children }) {
   const [allTodos, setAllTodos] = useState([]);
 
+  // function addTodo(todo) {
+  //   allTodos.map((todo) => [...])
+  // }
+
   return (
     <TodoContext.Provider
       value={{

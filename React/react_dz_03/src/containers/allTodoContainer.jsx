@@ -1,4 +1,9 @@
+import { Todo } from '../components/todo/todo';
+
 export function All() {
-    return <div>All ToDo</div>;
-  }
-  
+  return (
+    <div>
+      <Todo />
+    </div>
+  );
+}
