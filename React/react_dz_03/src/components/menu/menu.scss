@@ -1,6 +1,8 @@
 .menu {
     width: 100%;
-    background-color: aqua;
+    background-color: #041955;
+    color: #96B3FE;
+    border-bottom: 3px solid #EB06FF;
 
     & ul {
         display: flex;
@@ -17,10 +19,10 @@
                 font-size: 24px;
                 font-weight: 600;
                 letter-spacing: 1px;
-
+                transition: 0.3s;
 
                 &:hover {
-                    text-decoration: underline;
+                    text-shadow:#227BFF 1px 0 10px ;
                 }
             }
         }
@@ -28,5 +30,5 @@
 }
 
 .active {
-    color: purple;
+    color: #227BFF;
 }

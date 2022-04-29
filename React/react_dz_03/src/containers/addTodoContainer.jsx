@@ -1,10 +1,11 @@
 import { useContext, useState } from 'react';
 import { AddInputs } from '../components/addInputs/addInputs';
 import { TodoContext } from '../contexts/todoContext';
-import { validateHead, validateTxt, uid } from '../utils/validate';
+import { validateHead, validateTxt } from '../utils/validate';
+import { v4 as uuidv4 } from 'uuid';
 
 export function Add() {
-  const { allTodos, setAllTodos } = useContext(TodoContext);
+  const { allTodos, addTodo } = useContext(TodoContext);
   const [head, setHead] = useState('');
   const [descr, setDescr] = useState('');
 
@@ -13,13 +14,19 @@ export function Add() {
       const todo = {
         head,
         descr,
+        id: uuidv4(),
+        date: new Date().toLocaleString().replace(',', ''),
       };
-      console.log('todo--->', todo);
+
+      addTodo(todo);
+      setHead('');
+      setDescr('');
     }
   }
 
   function handlerTxtTodo({ target: { value } }) {
     setDescr(value);
+    console.log(allTodos);
   }
 
   function handlerHeadTodo({ target: { value } }) {
@@ -27,7 +34,7 @@ export function Add() {
   }
 
   return (
-    <div style={{overflowY: 'hidden'}}>
+    <div className='inputs-container'>
       <AddInputs
         saveTodo={handlerSaveTodo}
         txtTodo={handlerTxtTodo}

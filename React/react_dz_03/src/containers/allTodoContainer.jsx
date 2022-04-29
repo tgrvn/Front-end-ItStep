@@ -1,9 +1,17 @@
+import { useContext } from 'react';
+import { TodoContext } from '../contexts/todoContext';
 import { Todo } from '../components/todo/todo';
 
 export function All() {
+  const { allTodos } = useContext(TodoContext);
+
   return (
-    <div>
-      <Todo />
+    <div className='todo-container'>
+      {allTodos.length ? (
+        allTodos.map((todo) => <Todo key={todo.id} todo={todo} />)
+      ) : (
+        <h1>ADD</h1>
+      )}
     </div>
   );
 }

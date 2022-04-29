@@ -1,32 +1,23 @@
+import { useContext } from 'react';
+import { TodoContext } from '../../contexts/todoContext';
 import './style.scss';
 
-export function Todo() {
+export function Todo({ todo, delFlag, styles }) {
+  const { delTodo } = useContext(TodoContext);
+
+  function handlerDelete() {
+    delTodo(todo.id);
+  }
+
   return (
-    <div className='todo-container animate__animated animate__fadeIn'>
-      <div className='todo'>
-        <h3>TODO</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi
-          velit rerum illum.
-        </p>
-        <p className='date'>2020.20.20</p>
-      </div>
-      <div className='todo'>
-        <h3>TODO</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi
-          velit rerum illum.
-        </p>
-        <p className='date'>2020.20.20</p>
-      </div>
-      <div className='todo'>
-        <h3>TODO</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi
-          velit rerum illum.
-        </p>
-        <p className='date'>2020.20.20</p>
-      </div>
+    <div
+      className='todo animate__animated animate__fadeIn'
+      style={styles}
+    >
+      <h3>{todo.head}</h3>
+      <p>{todo.descr}</p>
+      <p className='date'>{todo.date}</p>
+      {delFlag && <button onClick={handlerDelete}>delete</button>}
     </div>
   );
 }

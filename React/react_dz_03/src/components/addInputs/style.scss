@@ -1,10 +1,12 @@
 .inputs-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 70vh;
+    gap: 2rem 0;
+    background-color: #3450A1;
+    min-height: 90vh;
     padding: 50px 100px;
-    --animate-duration: 0.6s;
 
     .inputs {
         width: 500px;

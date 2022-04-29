@@ -4,18 +4,25 @@
     justify-content: center;
     align-items: center;
     gap: 2rem 0;
-    min-height: 70vh;
+    background-color: #3450A1;
+    min-height: 90vh;
     padding: 50px 100px;
-    --animate-duration: 0.6s;
 
     .todo {
-        border: 1px solid #212121;
-        padding: 10px;
+        padding: 20px;
+        width: 500px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px 1px #041955;
+        color: #fff;
+        background-color: #041955;
+        cursor: pointer;
+        --animate-duration: 0.6s;
+
 
         .date {
             font-size: 12px;
             letter-spacing: 0.5px;
-            color: grey;
+            color: #87A4F0;
         }
     }
 }
