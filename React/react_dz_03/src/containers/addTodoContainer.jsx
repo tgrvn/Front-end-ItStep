@@ -5,7 +5,7 @@ import { validateHead, validateTxt } from '../utils/validate';
 import { v4 as uuidv4 } from 'uuid';
 
 export function Add() {
-  const { allTodos, addTodo } = useContext(TodoContext);
+  const { addTodo } = useContext(TodoContext);
   const [head, setHead] = useState('');
   const [descr, setDescr] = useState('');
 
@@ -26,7 +26,6 @@ export function Add() {
 
   function handlerTxtTodo({ target: { value } }) {
     setDescr(value);
-    console.log(allTodos);
   }
 
   function handlerHeadTodo({ target: { value } }) {

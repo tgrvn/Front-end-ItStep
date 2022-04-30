@@ -1,10 +1,17 @@
 import { useContext } from 'react';
 import { TodoContext } from '../contexts/todoContext';
 import { Todo } from '../components/todo/todo';
+import { Empty } from '../components/emptyMessage/emptyMessage';
+import { useNavigate } from 'react-router-dom';
 
 export function Del() {
   const { allTodos } = useContext(TodoContext);
   const delFlag = true;
+  const navigate = useNavigate();
+
+  function handlerClick() {
+    navigate('/add');
+  }
 
   return (
     <div className='todo-container'>
@@ -18,7 +25,7 @@ export function Del() {
           />
         ))
       ) : (
-        <h1>ADD</h1>
+        <Empty event={handlerClick} />
       )}
     </div>
   );
