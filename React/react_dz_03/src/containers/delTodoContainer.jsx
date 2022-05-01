@@ -1,12 +1,11 @@
 import { useContext } from 'react';
 import { TodoContext } from '../contexts/todoContext';
-import { Todo } from '../components/todo/todo';
 import { Empty } from '../components/emptyMessage/emptyMessage';
 import { useNavigate } from 'react-router-dom';
+import { ToastsContainer } from './toastsContainer';
 
 export function Del() {
-  const { allTodos } = useContext(TodoContext);
-  const delFlag = true;
+  const { allTodos, showTodo } = useContext(TodoContext);
   const navigate = useNavigate();
 
   function handlerClick() {
@@ -15,18 +14,8 @@ export function Del() {
 
   return (
     <div className='todo-container'>
-      {allTodos.length ? (
-        allTodos.map((todo) => (
-          <Todo
-            key={todo.id}
-            todo={todo}
-            delFlag={delFlag}
-            styles={{ cursor: 'default' }}
-          />
-        ))
-      ) : (
-        <Empty event={handlerClick} />
-      )}
+      {allTodos.length ? showTodo : <Empty event={handlerClick} />}
+      <ToastsContainer />
     </div>
   );
 }

@@ -1,11 +1,10 @@
 import { useContext } from 'react';
 import { TodoContext } from '../contexts/todoContext';
-import { Todo } from '../components/todo/todo';
 import { Empty } from '../components/emptyMessage/emptyMessage';
 import { useNavigate } from 'react-router-dom';
 
 export function All() {
-  const { allTodos } = useContext(TodoContext);
+  const { allTodos, showTodo } = useContext(TodoContext);
   const navigate = useNavigate();
 
   function handlerClick() {
@@ -14,11 +13,7 @@ export function All() {
 
   return (
     <div className='todo-container'>
-      {allTodos.length ? (
-        allTodos.map((todo) => <Todo key={todo.id} todo={todo} />)
-      ) : (
-        <Empty event={handlerClick} />
-      )}
+      {allTodos.length ? showTodo : <Empty event={handlerClick} />}
     </div>
   );
 }

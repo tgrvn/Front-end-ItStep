@@ -1,25 +1,34 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { Toast } from '../components/toast/toast';
+import { v4 as uuidv4 } from 'uuid';
 
-export const TosastContext = React.createContext(null);
+export const ToastContext = React.createContext(null);
 
-export default function TosastContextProvider({ children }) {
-  const [allTosts, setAllTosts] = useState([]);
+export default function ToastContextProviider({ children }) {
+  const [allToasts, setallToasts] = useState([]);
 
-  //   function addToast(tost) {
-  //     setAllTosts([...allTosts, tost]);
-  //   }
+  function createToast(message, color) {
+    const toast = {
+      id: uuidv4(),
+      message,
+      color,
+    };
+    setallToasts([...allToasts, toast]);
+  }
 
-  //   function delTost(id) {
-  //     setAllTodos(allTodos.filter((todo) => todo.id !== id));
-  //   }
+  function deleteToast(id) {
+    setallToasts(allToasts.filter((toast) => id !== toast.id));
+  }
+
+  const showToasts =
+    !!allToasts &&
+    allToasts.map((toast) => <Toast key={toast.id} toast={toast} />);
 
   return (
-    <TosastContext.Provider
-      value={{
-        allTosts,
-      }}
+    <ToastContext.Provider
+      value={{ allToasts, createToast, showToasts, deleteToast }}
     >
       {children}
-    </TosastContext.Provider>
+    </ToastContext.Provider>
   );
 }

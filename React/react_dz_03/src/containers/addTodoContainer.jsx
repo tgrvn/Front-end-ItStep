@@ -3,9 +3,12 @@ import { AddInputs } from '../components/addInputs/addInputs';
 import { TodoContext } from '../contexts/todoContext';
 import { validateHead, validateTxt } from '../utils/validate';
 import { v4 as uuidv4 } from 'uuid';
+import { ToastContext } from '../contexts/toastContext';
+import { ToastsContainer } from './toastsContainer';
 
 export function Add() {
   const { addTodo } = useContext(TodoContext);
+  const { createToast } = useContext(ToastContext);
   const [error, seterror] = useState('');
   const [head, setHead] = useState('');
   const [descr, setDescr] = useState('');
@@ -20,6 +23,7 @@ export function Add() {
       };
 
       addTodo(todo);
+      createToast('add', 'green');
       setHead('');
       setDescr('');
       seterror('');
@@ -48,6 +52,7 @@ export function Add() {
         descr={descr}
         error={error}
       />
+      <ToastsContainer />
     </div>
   );
 }

@@ -1,0 +1,13 @@
+.toasts {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    right: 1rem;
+    bottom: 1rem;
+    width: max-content;
+    height: max-content;
+
+    .toast {
+        padding: 1rem;
+    }
+}
