@@ -14,10 +14,10 @@ export function Todo({ todo, delFlag, styles }) {
       className='todo animate__animated animate__fadeIn'
       style={styles}
     >
-      <h3>{todo.head}</h3>
+      <h3 className='head'>{todo.head}</h3>
       <p>{todo.descr}</p>
       <p className='date'>{todo.date}</p>
-      {delFlag && <button onClick={handlerDelete}>delete</button>}
+      {delFlag && <div className='del' onClick={handlerDelete}></div>}
     </div>
   );
 }

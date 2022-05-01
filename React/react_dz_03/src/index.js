@@ -4,14 +4,17 @@ import './index.css';
 import App from './App';
 import { BrowserRouter as Router } from 'react-router-dom';
 import TodoContextProvider from './contexts/todoContext';
+import TosastContextProvider from './contexts/toastContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Router>
-      <TodoContextProvider>
-        <App />
-      </TodoContextProvider>
+      <TosastContextProvider>
+        <TodoContextProvider>
+          <App />
+        </TodoContextProvider>
+      </TosastContextProvider>
     </Router>
   </React.StrictMode>
 );

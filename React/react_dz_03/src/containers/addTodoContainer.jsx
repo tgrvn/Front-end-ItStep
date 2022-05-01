@@ -6,6 +6,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 export function Add() {
   const { addTodo } = useContext(TodoContext);
+  const [error, seterror] = useState('');
   const [head, setHead] = useState('');
   const [descr, setDescr] = useState('');
 
@@ -21,6 +22,11 @@ export function Add() {
       addTodo(todo);
       setHead('');
       setDescr('');
+      seterror('');
+    } else if (!validateHead(head)) {
+      seterror('*head must be min 3, max 12');
+    } else if (!validateTxt(descr)) {
+      seterror('*descr must be min 3, max 30');
     }
   }
 
@@ -40,6 +46,7 @@ export function Add() {
         headTodo={handlerHeadTodo}
         head={head}
         descr={descr}
+        error={error}
       />
     </div>
   );

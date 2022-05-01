@@ -1,8 +1,10 @@
 import './style.scss';
 import 'animate.css';
+import { Button } from '../../ui/button/button';
+import { ErrorMsg } from '../../ui/errorMessage/errorMessage';
 
 export function AddInputs(props) {
-  const { saveTodo, txtTodo, headTodo, head, descr } = props;
+  const { saveTodo, txtTodo, headTodo, head, descr, error } = props;
 
   return (
     <div className='inputs animate__animated animate__fadeIn'>
@@ -17,7 +19,8 @@ export function AddInputs(props) {
         onChange={txtTodo}
         value={descr}
       ></textarea>
-      <button onClick={saveTodo}>add</button>
+      <Button event={saveTodo} title={'ADD TODO'} />
+      <ErrorMsg error={error} />
     </div>
   );
 }
