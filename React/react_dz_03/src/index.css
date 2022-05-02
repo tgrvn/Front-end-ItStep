@@ -33,3 +33,14 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+:root {
+  --primary-bc-color: #3450a1;
+  --secondary-bc-color: #041955;
+  --primary-text-color: #fff;
+  --secondary-text-color: #87a4f0;
+  --error-text-color: #e57373;
+  --primary-border-color: #eb06ff;
+  --primary-menu-text-color: #96b3fe;
+  --secondary-menu-text-color: #227bff;
+}

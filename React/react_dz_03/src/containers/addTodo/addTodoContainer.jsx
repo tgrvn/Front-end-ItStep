@@ -1,14 +1,14 @@
+import './style.scss'
 import { useContext, useState } from 'react';
-import { AddInputs } from '../components/addInputs/addInputs';
-import { TodoContext } from '../contexts/todoContext';
-import { validateHead, validateTxt } from '../utils/validate';
+import { TodoContext } from '../../contexts/todoContext';
+import { validateHead, validateTxt } from '../../utils/validate';
 import { v4 as uuidv4 } from 'uuid';
-import { ToastContext } from '../contexts/toastContext';
-import { ToastsContainer } from './toastsContainer';
+import { Toast } from '../../ui/toast/toast';
+import { Button } from '../../ui/button/button';
+import { ErrorMsg } from '../../ui/errorMessage/errorMessage'
 
 export function Add() {
   const { addTodo } = useContext(TodoContext);
-  const { createToast } = useContext(ToastContext);
   const [error, seterror] = useState('');
   const [head, setHead] = useState('');
   const [descr, setDescr] = useState('');
@@ -23,7 +23,6 @@ export function Add() {
       };
 
       addTodo(todo);
-      createToast('add', 'green');
       setHead('');
       setDescr('');
       seterror('');
@@ -43,16 +42,23 @@ export function Add() {
   }
 
   return (
-    <div className='inputs-container'>
-      <AddInputs
-        saveTodo={handlerSaveTodo}
-        txtTodo={handlerTxtTodo}
-        headTodo={handlerHeadTodo}
-        head={head}
-        descr={descr}
-        error={error}
-      />
-      <ToastsContainer />
+    <div className='todo-container'>
+      <div className='inputs animate__animated animate__fadeIn'>
+        <input
+          type='text'
+          placeholder='Head Todo'
+          onChange={handlerHeadTodo}
+          value={head}
+        />
+        <textarea
+          placeholder='Description Todo'
+          onChange={handlerTxtTodo}
+          value={descr}
+        ></textarea>
+        <Button event={handlerSaveTodo} title={'ADD TODO'} />
+        <ErrorMsg error={error} />
+      </div>
+      <Toast />
     </div>
   );
 }

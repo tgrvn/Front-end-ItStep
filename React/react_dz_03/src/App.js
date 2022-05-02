@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
-import { All } from './containers/allTodoContainer';
-import { Add } from './containers/addTodoContainer';
-import { Del } from './containers/delTodoContainer';
+import { All } from './containers/allTodo/allTodoContainer';
+import { Add } from './containers/addTodo/addTodoContainer';
+import { Del } from './containers/delTodo/delTodoContainer';
 
 import './App.css';
 import { Menu } from './components/menu/menu';

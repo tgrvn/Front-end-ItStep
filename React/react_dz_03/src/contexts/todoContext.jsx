@@ -6,15 +6,16 @@ export const TodoContext = React.createContext(null);
 
 export default function TodoContextProvider({ children }) {
   const [allTodos, setAllTodos] = useState([]);
-  const { createToast } = useContext(ToastContext);
+  const { showToast } = useContext(ToastContext);
 
   function addTodo(todo) {
     setAllTodos([...allTodos, todo]);
+    showToast('add');
   }
 
   function delTodo(id) {
     setAllTodos(allTodos.filter((todo) => todo.id !== id));
-    createToast('del', 'red');
+    showToast('del');
   }
 
   const showTodo = allTodos.map((todo) => <Todo todo={todo} key={todo.id} />);
