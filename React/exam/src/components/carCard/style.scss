@@ -1,0 +1,28 @@
+.card-container {
+    padding: 4rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 1.5rem 0;
+
+    .card {
+        padding: 1rem;
+        margin: 0 auto;
+        width: 400px;
+        cursor: pointer;
+        outline: 1px solid var(--search-color-bc);
+        box-shadow: 0 0 5px 1px #64B5F6;
+        border-radius: 5px;
+
+        img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        h3,
+        p {
+            text-align: left;
+        }
+    }
+}

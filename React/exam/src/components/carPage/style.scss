@@ -1,0 +1,43 @@
+.car-page-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+
+    .row {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        gap: 0 4rem;
+
+        img {
+            object-fit: contain;
+            border-radius: 5px;
+            width: 900px;
+            height: 600px;
+        }
+
+        .mini-descr {
+            padding: 2rem;
+            border: 1px solid red;
+            height: max-content;
+            border-radius: 5px;
+        }
+    }
+
+    .descr {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .date {
+        color: gray;
+    }
+
+    .back {
+        width: 75px;
+        position: absolute;
+        left: 10rem;
+        cursor: pointer;
+    }
+}
